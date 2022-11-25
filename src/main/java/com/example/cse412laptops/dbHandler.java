@@ -41,7 +41,6 @@ public class dbHandler implements IPersistenceHandler {
     }
 
 
-
     @Override
     public List<Laptop> getAllLaptop() {
         try {
@@ -64,106 +63,7 @@ public class dbHandler implements IPersistenceHandler {
     }
 
     @Override
-    public List<Laptop> getLaptopUnder500() {
-        try {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model WHERE 'Price' < '500");
-            ResultSet sqlReturnValues = stmt.executeQuery();
-
-            List<Laptop> returnValues = new ArrayList<>();
-
-            while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
-            }
-            return returnValues;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public List<Laptop> getLaptopUnder1000() {
-        try {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model WHERE 'Price' < '1000");
-            ResultSet sqlReturnValues = stmt.executeQuery();
-
-            List<Laptop> returnValues = new ArrayList<>();
-
-            while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
-            }
-            return returnValues;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-        }
-        return null;    }
-
-    @Override
-    public List<Laptop> getLaptopApple() {
-        try {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model, manufacture WHERE manufacture.'mID' = model.mid AND manufacture.Name = 'Apple'");
-            ResultSet sqlReturnValues = stmt.executeQuery();
-
-            List<Laptop> returnValues = new ArrayList<>();
-
-            while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
-            }
-            return returnValues;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public List<Laptop> getLaptopWindow() {
-        try {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model, os WHERE os.OSid = model.OSid AND os.Name = 'Windows'");
-            ResultSet sqlReturnValues = stmt.executeQuery();
-
-            List<Laptop> returnValues = new ArrayList<>();
-
-            while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
-            }
-            return returnValues;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public List<Laptop> getLaptopRam16() {
-        try {
-            PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model WHERE model.RAM = '16GB'");
-            ResultSet sqlReturnValues = stmt.executeQuery();
-
-            List<Laptop> returnValues = new ArrayList<>();
-
-            while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
-            }
-            return returnValues;
-        } catch (SQLException throwable) {
-            throwable.printStackTrace();
-        }
+    public List<Laptop> specificQuery() {
         return null;
     }
 }
