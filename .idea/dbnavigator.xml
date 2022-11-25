@@ -55,7 +55,7 @@
           <database value="412project" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="MDQwMQ==" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />

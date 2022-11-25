@@ -1,22 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse412laptops.SearchPageController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse412laptops.SearchPageController">
     <children>
-        <Label layoutX="222.0" layoutY="41.0" prefHeight="17.0" prefWidth="157.0" text="Laptop Search">
+        <Label layoutX="222.0" layoutY="41.0" prefHeight="17.0" prefWidth="157.0" text="Laptop Central">
             <font>
                 <Font size="24.0" />
             </font>
         </Label>
-        <Label layoutX="80.0" layoutY="90.0" text="Build your search query:" />
-        <RadioButton fx:id="under500" layoutX="91.0" layoutY="132.0" mnemonicParsing="false" text="Under $500" />
-        <Button layoutX="273.0" layoutY="316.0" mnemonicParsing="false" onAction="#searchBtnClick" text="Search" />
-        <Label fx:id="selectedLabel" layoutX="269.0" layoutY="201.0" text="Label" />
+        <RadioButton fx:id="under500" layoutX="423.0" layoutY="204.0" mnemonicParsing="false" text="Under $500" />
+        <Button layoutX="261.0" layoutY="442.0" mnemonicParsing="false" onAction="#searchBtnClick" text="Search" />
+      <Label layoutX="83.0" layoutY="110.0" text="Filter By: " />
+      <Label layoutX="79.0" layoutY="158.0" text="Manufacturer" />
+      <Label layoutX="436.0" layoutY="158.0" text="Price Range" />
+      <Label layoutX="247.0" layoutY="158.0" text="Operating System" />
+      <CheckBox fx:id="microsoft" layoutX="76.0" layoutY="204.0" mnemonicParsing="false" text="Microsoft" />
+      <CheckBox fx:id="apple" layoutX="76.0" layoutY="234.0" mnemonicParsing="false" text="Apple" />
+      <CheckBox fx:id="Lenovo" layoutX="76.0" layoutY="264.0" mnemonicParsing="false" text="Lenovo" />
+      <CheckBox fx:id="dell" layoutX="76.0" layoutY="294.0" mnemonicParsing="false" text="Dell" />
+      <Accordion layoutX="79.0" layoutY="478.0" />
+      <Accordion layoutX="37.0" layoutY="346.0" />
+      <CheckBox fx:id="chromeOS" layoutX="255.0" layoutY="204.0" mnemonicParsing="false" text="Chome OS" />
+      <CheckBox fx:id="otherManufacturer" layoutX="76.0" layoutY="324.0" mnemonicParsing="false" text="Other" />
+      <CheckBox fx:id="linux" layoutX="255.0" layoutY="234.0" mnemonicParsing="false" text="Linux" />
+      <CheckBox fx:id="windows" layoutX="255.0" layoutY="264.0" mnemonicParsing="false" text="Windows" />
+      <CheckBox fx:id="macOS" layoutX="255.0" layoutY="294.0" mnemonicParsing="false" text="Mac OS" />
+      <CheckBox fx:id="otherOS" layoutX="255.0" layoutY="324.0" mnemonicParsing="false" text="Other" />
+      <RadioButton fx:id="range500_1000" layoutX="423.0" layoutY="234.0" mnemonicParsing="false" text="\$500-$1000" />
+      <RadioButton fx:id="range1000_1500" layoutX="423.0" layoutY="264.0" mnemonicParsing="false" text="\$1000-$1500" />
+      <RadioButton fx:id="range1500_2000" layoutX="423.0" layoutY="294.0" mnemonicParsing="false" text="\$1500-$2000" />
+      <RadioButton fx:id="over2000" layoutX="423.0" layoutY="324.0" mnemonicParsing="false" text="Over $2000" />
     </children>
 </AnchorPane>
