@@ -28,7 +28,7 @@ public class SearchPageController {
         // test if radio button is selected
         if(under500.isSelected())
         {
-            selectedLabel.setText("Display ALL laptops ");
+            //selectedLabel.setText("Display ALL laptops ");
             m.resultScene(persistenceHandler.getAllLaptop());
         }
         else
