@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="bf982bbc-2887-41da-a98b-e0492963a2d8">
-      <console name="project" type="STANDARD" schema="412project" session="Main" />
+    <connection id="cb7dd137-a27d-4814-8114-89b4f5a58237">
+      <console name="Connection" type="STANDARD" schema="412project" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -39,9 +39,9 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="bf982bbc-2887-41da-a98b-e0492963a2d8" active="true" signed="true">
+      <connection id="cb7dd137-a27d-4814-8114-89b4f5a58237" active="true" signed="true">
         <database>
-          <name value="project" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
