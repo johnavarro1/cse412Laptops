@@ -2,10 +2,7 @@ package com.example.cse412laptops;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.RadioButton;
+import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -13,7 +10,41 @@ import java.util.ArrayList;
 public class SearchPageController {
     @FXML
     private RadioButton under500;
+    private CheckBox Lenovo;
 
+    @FXML
+    private CheckBox apple;
+
+    @FXML
+    private CheckBox chromeOS;
+
+    private CheckBox otherManufacturer;
+    @FXML
+    private CheckBox dell;
+    private CheckBox otherOS;
+    @FXML
+    private RadioButton over2000;
+
+    @FXML
+    private RadioButton range1000_1500;
+
+    @FXML
+    private RadioButton range1500_2000;
+
+    @FXML
+    private RadioButton range500_1000;
+    
+
+    @FXML
+    private CheckBox windows;
+    @FXML
+    private CheckBox linux;
+
+    @FXML
+    private CheckBox macOS;
+
+    @FXML
+    private CheckBox microsoft;
     @FXML
     private Label selectedLabel;
 

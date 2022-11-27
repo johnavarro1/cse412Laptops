@@ -3,6 +3,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 
@@ -20,8 +21,10 @@ public class resultsController {
     @FXML
     private ListView<Laptop> laptopListView;
 
+    private Button backBtn;
+
     @FXML
-    private Button back;
+    private TableView<?> resultsTable;
 
     public void backToHome(ActionEvent event)
     {
