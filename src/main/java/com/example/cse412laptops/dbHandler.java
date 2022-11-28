@@ -1,13 +1,7 @@
 package com.example.cse412laptops;
-
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
-
 
 public class dbHandler implements IPersistenceHandler {
     private static dbHandler instance;
@@ -43,14 +37,13 @@ public class dbHandler implements IPersistenceHandler {
         }
     }
 
-
     @Override
-    public List<Laptop> getAllLaptop() {
+    public ObservableList<Laptop> getAllLaptop() {
         try {
             PreparedStatement stmt = connection.prepareStatement("SELECT * FROM model");
             ResultSet sqlReturnValues = stmt.executeQuery();
 
-            List<Laptop> returnValues = new ArrayList<>();
+            ObservableList<Laptop> returnValues = FXCollections.observableArrayList();
 
             while (sqlReturnValues.next()){
                 returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),

@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -15,7 +14,6 @@
                 <Font size="24.0" />
             </font>
         </Label>
-        <RadioButton fx:id="under500" layoutX="423.0" layoutY="204.0" mnemonicParsing="false" text="Under $500" />
         <Button layoutX="261.0" layoutY="369.0" mnemonicParsing="false" onAction="#searchBtnClick" text="Search" />
       <Label layoutX="83.0" layoutY="121.0" text="Filter By: " />
       <Label layoutX="79.0" layoutY="158.0" text="Manufacturer" />
@@ -33,10 +31,11 @@
       <CheckBox fx:id="windows" layoutX="255.0" layoutY="264.0" mnemonicParsing="false" text="Windows" />
       <CheckBox fx:id="macOS" layoutX="255.0" layoutY="294.0" mnemonicParsing="false" text="Mac OS" />
       <CheckBox fx:id="otherOS" layoutX="255.0" layoutY="324.0" mnemonicParsing="false" text="Other" />
-      <RadioButton fx:id="range500_1000" layoutX="423.0" layoutY="234.0" mnemonicParsing="false" text="\$500-$1000" />
-      <RadioButton fx:id="range1000_1500" layoutX="423.0" layoutY="264.0" mnemonicParsing="false" text="\$1000-$1500" />
-      <RadioButton fx:id="range1500_2000" layoutX="423.0" layoutY="294.0" mnemonicParsing="false" text="\$1500-$2000" />
-      <RadioButton fx:id="over2000" layoutX="423.0" layoutY="324.0" mnemonicParsing="false" text="Over $2000" />
       <Label layoutX="81.0" layoutY="84.0" text="Search for a laptop model based on the specifications below to get more details." />
+      <CheckBox fx:id="under500" layoutX="423.0" layoutY="204.0" mnemonicParsing="false" text="Under $500" />
+      <CheckBox fx:id="range500_1000" layoutX="423.0" layoutY="234.0" mnemonicParsing="false" text="\$500-$1000" />
+      <CheckBox fx:id="range1000_1500" layoutX="423.0" layoutY="264.0" mnemonicParsing="false" text="\$1000-$1500" />
+      <CheckBox fx:id="range1500_2000" layoutX="423.0" layoutY="294.0" mnemonicParsing="false" text="\$1500-$2000" />
+      <CheckBox fx:id="over2000" layoutX="423.0" layoutY="324.0" mnemonicParsing="false" text="Over $2000" />
     </children>
 </AnchorPane>
