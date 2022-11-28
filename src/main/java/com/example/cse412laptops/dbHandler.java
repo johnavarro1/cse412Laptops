@@ -54,7 +54,7 @@ public class dbHandler implements IPersistenceHandler {
 
             while (sqlReturnValues.next()){
                 returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),
-                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
+                        sqlReturnValues.getString(10),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
                         sqlReturnValues.getString(8)));
             }
             return returnValues;
@@ -75,7 +75,7 @@ public class dbHandler implements IPersistenceHandler {
 
             while (sqlReturnValues.next()){
                 returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),
-                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
+                        sqlReturnValues.getString(10),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
                         sqlReturnValues.getString(8)));
             }
             System.out.println(returnValues.size());

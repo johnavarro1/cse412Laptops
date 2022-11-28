@@ -79,11 +79,33 @@ public class Laptop {
                 this.mid = new SimpleStringProperty("Apple");
                 break;
         }
-
+        if(OsID.equals("A"))
+        {
+            this.OsID = new SimpleStringProperty("Chrome OS");
+        }
+        else if(OsID.equals("B"))
+        {
+            this.OsID = new SimpleStringProperty("Linux");
+        }
+            else if(OsID.equals("C"))
+        {
+            this.OsID = new SimpleStringProperty("Windows");
+        }
+        else if(OsID.equals("D"))
+        {
+            this.OsID = new SimpleStringProperty("Android");
+        }
+        else if(OsID.equals("E") )
+        {
+            this.OsID = new SimpleStringProperty("MacOS");
+        }
+        else
+        {
+            this.OsID = new SimpleStringProperty("Other");
+        }
 
         this.ram = new SimpleStringProperty(ram);
         this.storage = new SimpleStringProperty(storage);
-        this.OsID = new SimpleStringProperty(OsID);
         this.price = new SimpleStringProperty(String.format("%.2f",price));
         this.modelName = new SimpleStringProperty(modelName);
     }
