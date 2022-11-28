@@ -19,8 +19,8 @@ public class Main extends Application {
         stg = stage;
         stage.setResizable(false);
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("search-page.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
-        stage.setTitle("Hello!");
+        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+        stage.setTitle("Welcome");
         stage.setScene(scene);
         stage.show();
     }

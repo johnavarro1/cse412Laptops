@@ -49,9 +49,9 @@ public class resultsController {
     private TableColumn<Laptop,String> Storage;
 
     public void backToHome(ActionEvent event) throws IOException {
-        Main m = new Main();
-        m.searchScene();
-        laptopListView.getItems().clear();
+       Main m = new Main();
+       m.searchScene();
+       laptopListView.getItems().clear();
     }
 
 }

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="597.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.cse412laptops.SearchPageController">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="597.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cse412laptops.SearchPageController">
     <children>
         <Label layoutX="222.0" layoutY="41.0" prefHeight="17.0" prefWidth="157.0" text="Laptop Central">
             <font>
@@ -17,7 +17,7 @@
         </Label>
         <RadioButton fx:id="under500" layoutX="423.0" layoutY="204.0" mnemonicParsing="false" text="Under $500" />
         <Button layoutX="261.0" layoutY="369.0" mnemonicParsing="false" onAction="#searchBtnClick" text="Search" />
-      <Label layoutX="83.0" layoutY="110.0" text="Filter By: " />
+      <Label layoutX="83.0" layoutY="121.0" text="Filter By: " />
       <Label layoutX="79.0" layoutY="158.0" text="Manufacturer" />
       <Label layoutX="436.0" layoutY="158.0" text="Price Range" />
       <Label layoutX="247.0" layoutY="158.0" text="Operating System" />
@@ -37,5 +37,6 @@
       <RadioButton fx:id="range1000_1500" layoutX="423.0" layoutY="264.0" mnemonicParsing="false" text="\$1000-$1500" />
       <RadioButton fx:id="range1500_2000" layoutX="423.0" layoutY="294.0" mnemonicParsing="false" text="\$1500-$2000" />
       <RadioButton fx:id="over2000" layoutX="423.0" layoutY="324.0" mnemonicParsing="false" text="Over $2000" />
+      <Label layoutX="81.0" layoutY="84.0" text="Search for a laptop model based on the specifications below to get more details." />
     </children>
 </AnchorPane>
