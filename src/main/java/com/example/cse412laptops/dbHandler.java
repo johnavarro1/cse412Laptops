@@ -1,6 +1,9 @@
 package com.example.cse412laptops;
 
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -53,7 +56,7 @@ public class dbHandler implements IPersistenceHandler {
                 returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
                         sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
                         sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getBigDecimal(12),sqlReturnValues.getInt(13)));
+                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getInt(13)));
             }
             return returnValues;
         } catch (SQLException throwable) {
@@ -63,7 +66,24 @@ public class dbHandler implements IPersistenceHandler {
     }
 
     @Override
-    public List<Laptop> specificQuery() {
+    public ObservableList<Laptop> specificQuery(String s)
+    {
+        try {
+            PreparedStatement stmt = connection.prepareStatement(s);
+            ResultSet sqlReturnValues = stmt.executeQuery();
+
+            ObservableList<Laptop> returnValues = FXCollections.observableArrayList();
+
+            while (sqlReturnValues.next()){
+                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
+                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
+                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
+                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getInt(13)));
+            }
+            return returnValues;
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
         return null;
     }
 }

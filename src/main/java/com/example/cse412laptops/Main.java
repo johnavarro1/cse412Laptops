@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import javafx.collections.ObservableList;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +25,7 @@ public class Main extends Application {
         stage.show();
     }
 
-    public void resultScene(List<Laptop> arr) throws IOException{
+    public void resultScene(ObservableList<Laptop> arr) throws IOException{
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation((getClass().getResource("results.fxml")));
         Parent pane = loader.load();
