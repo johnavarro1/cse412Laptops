@@ -13,7 +13,22 @@ public class resultsController {
     public void initialize(ObservableList<Laptop> Arr)
     {
         list = Arr;
-        //setList();
+        TableColumn Manufacture = new TableColumn("Manufacture");
+        TableColumn Model = new TableColumn("Model");
+        TableColumn OS = new TableColumn("OS");
+        TableColumn Price = new TableColumn("Price");
+        TableColumn RAM = new TableColumn("RAM");
+        TableColumn Storage = new TableColumn("Storage");
+        laptopListView.getColumns().addAll(Manufacture, Model, OS, Price, RAM, Storage);
+
+        Manufacture.setCellValueFactory(new PropertyValueFactory<Laptop, String>("mid"));
+        Model.setCellValueFactory(new PropertyValueFactory<Laptop, String>("modelName"));
+        OS.setCellValueFactory(new PropertyValueFactory<Laptop, String>("OsID"));
+        Price.setCellValueFactory(new PropertyValueFactory<Laptop, String>("price"));
+        RAM.setCellValueFactory(new PropertyValueFactory<Laptop, String>("ram"));
+        Storage.setCellValueFactory(new PropertyValueFactory<Laptop, String>("storage"));
+        laptopListView.setItems(list);
+        System.out.println("RESULTS SIZE: " + list.size());
     }
     @FXML
     private TableView<Laptop> laptopListView;
@@ -35,24 +50,6 @@ public class resultsController {
     public void backToHome(ActionEvent event)
     {
         laptopListView.getItems().clear();
-    }
-    @FXML
-    public void initialize()
-    {
-        TableColumn Manufacture = new TableColumn("Manufacture");
-        TableColumn Model = new TableColumn("Model");
-        TableColumn OS = new TableColumn("OS");
-        TableColumn Price = new TableColumn("Price");
-        TableColumn RAM = new TableColumn("RAM");
-        TableColumn Storage = new TableColumn("Storage");
-        Manufacture.setCellValueFactory(new PropertyValueFactory<Laptop, String>("mid"));
-        Model.setCellValueFactory(new PropertyValueFactory<Laptop, String>("modelName"));
-        OS.setCellValueFactory(new PropertyValueFactory<Laptop, String>("OsID"));
-        Price.setCellValueFactory(new PropertyValueFactory<Laptop, String>("price"));
-        RAM.setCellValueFactory(new PropertyValueFactory<Laptop, String>("ram"));
-        Storage.setCellValueFactory(new PropertyValueFactory<Laptop, String>("storage"));
-        laptopListView.setItems(list);
-
     }
 
 }

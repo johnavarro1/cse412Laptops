@@ -12,15 +12,6 @@
           <TableColumn prefWidth="75.0" text="C2" />
         </columns>
       </TableView>
-      <TableView fx:id="laptopListView" prefHeight="336.0" prefWidth="600.0">
-        <columns>
-          <TableColumn prefWidth="108.0" text="Manufacture" />
-          <TableColumn prefWidth="97.0" text="Model" />
-            <TableColumn prefWidth="85.0" text="OS" />
-            <TableColumn prefWidth="101.0" text="Price" />
-            <TableColumn prefWidth="83.0" text="RAM" />
-            <TableColumn prefWidth="121.0" text="Storage" />
-        </columns>
-      </TableView>
+      <TableView fx:id="laptopListView" prefHeight="336.0" prefWidth="600.0" />
    </children>
 </AnchorPane>

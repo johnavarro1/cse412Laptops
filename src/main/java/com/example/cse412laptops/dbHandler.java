@@ -53,10 +53,9 @@ public class dbHandler implements IPersistenceHandler {
             List<Laptop> returnValues = new ArrayList<>();
 
             while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getInt(13)));
+                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),
+                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
+                        sqlReturnValues.getString(8)));
             }
             return returnValues;
         } catch (SQLException throwable) {
@@ -75,11 +74,11 @@ public class dbHandler implements IPersistenceHandler {
             ObservableList<Laptop> returnValues = FXCollections.observableArrayList();
 
             while (sqlReturnValues.next()){
-                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),sqlReturnValues.getString(3),
-                        sqlReturnValues.getString(4),sqlReturnValues.getString(5),sqlReturnValues.getString(6),sqlReturnValues.getString(7),
-                        sqlReturnValues.getString(8),sqlReturnValues.getString(9),sqlReturnValues.getString(10),
-                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getInt(13)));
+                returnValues.add(new Laptop(sqlReturnValues.getInt(1),sqlReturnValues.getString(2),
+                        sqlReturnValues.getString(11),sqlReturnValues.getFloat(12),sqlReturnValues.getString(7),
+                        sqlReturnValues.getString(8)));
             }
+            System.out.println(returnValues.size());
             return returnValues;
         } catch (SQLException throwable) {
             throwable.printStackTrace();

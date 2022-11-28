@@ -7,26 +7,25 @@ import javafx.beans.property.SimpleStringProperty;
 import java.math.BigDecimal;
 
 public class Laptop {
-    private SimpleIntegerProperty mid;
+    private SimpleStringProperty mid;
     private SimpleStringProperty modelName;
     private SimpleStringProperty ram;
     private SimpleStringProperty storage;
     private SimpleStringProperty OsID;
-    private SimpleFloatProperty price;
+    private SimpleStringProperty price;
 
 
 
-    Laptop(Integer mid,String modelName, String category, String screenSize, String Screen, String cpu, String ram, String storage,
-    String gpu, String OsID, String weight, Float price, Integer modelID )
+    Laptop(Integer mid,String modelName,String OsID, Float price,String ram, String storage)
     {
-        this.mid = new SimpleIntegerProperty(mid);
+        this.mid = new SimpleStringProperty(mid.toString());
         this.ram = new SimpleStringProperty(ram);
         this.storage = new SimpleStringProperty(storage);
         this.OsID = new SimpleStringProperty(OsID);
-        this.price = new SimpleFloatProperty(price);
+        this.price = new SimpleStringProperty(price.toString());
         this.modelName = new SimpleStringProperty(modelName);
     }
-    public Integer getMid() {
+    public String getMid() {
         return mid.get();
     }
 
@@ -46,7 +45,7 @@ public class Laptop {
         return OsID.get();
     }
 
-    public Float getPrice() {
+    public String getPrice() {
         return price.get();
     }
 
