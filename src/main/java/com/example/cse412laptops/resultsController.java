@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
 import java.math.BigDecimal;
 
 public class resultsController {
@@ -47,8 +48,9 @@ public class resultsController {
     @FXML
     private TableColumn<Laptop,String> Storage;
 
-    public void backToHome(ActionEvent event)
-    {
+    public void backToHome(ActionEvent event) throws IOException {
+        Main m = new Main();
+        m.searchScene();
         laptopListView.getItems().clear();
     }
 

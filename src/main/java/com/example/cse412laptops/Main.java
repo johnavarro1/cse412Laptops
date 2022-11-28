@@ -33,6 +33,14 @@ public class Main extends Application {
         resultsController controller = loader.getController();
         controller.initialize(arr);
     }
+    public void searchScene() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation((getClass().getResource("search-page.fxml")));
+        Parent pane = loader.load();
+        stg.getScene().setRoot(pane);
+        SearchPageController controller = loader.getController();
+
+    }
     public static void main(String[] args) {
         launch();
     }
