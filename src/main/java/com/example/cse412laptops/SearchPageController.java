@@ -116,27 +116,27 @@ public class SearchPageController {
         // get all OS selections
         if(chromeOS.isSelected())
         {
-            osSelection.add("os.\"OSid\" = model.\"Osid\" AND os.\"Name\" = 'Chrome OS'");
+            osSelection.add("os.\"OSid\" = model.\"OSid\" AND os.\"Name\" = 'Chrome OS'");
         }
 
         if(linux.isSelected())
         {
-            osSelection.add("os.\"OSid\" = model.\"Osid\" AND os.\"Name\" = 'Linux'");
+            osSelection.add("os.\"OSid\" = model.\"OSid\" AND os.\"Name\" = 'Linux'");
         }
 
         if(windows.isSelected())
         {
-            osSelection.add("os.\"OSid\" = model.\"Osid\" AND os.\"Name\" = 'Windows'");
+            osSelection.add("os.\"OSid\" = model.\"OSid\" AND os.\"Name\" = 'Windows'");
         }
 
         if(macOS.isSelected())
         {
-            osSelection.add("os.\"OSid\" = model.\"Osid\" AND os.\"Name\" = 'Mac OS'");
+            osSelection.add("os.\"OSid\" = model.\"OSid\" AND os.\"Name\" = 'Mac OS'");
         }
 
         if(otherOS.isSelected())
         {
-            osSelection.add("os.\"OSid\" = model.\"Osid\" AND os.\"Name\" not in ('Linux','Windows','Mac OS','Chrome OS')");
+            osSelection.add("os.\"OSid\" = model.\"OSid\" AND os.\"Name\" not in ('Linux','Windows','Mac OS','Chrome OS')");
         }
 
         // get all price selections
